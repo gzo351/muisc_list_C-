@@ -2,52 +2,43 @@
 #include <string.h>
 #include <stdio.h>
 int main() {
-	int japanese = 0;
-	int japaneseandenglish = 0;
-	int jazz = 0;
-	int 英语 = 0;
-	int 爵士 = 0;
-	int 中日结合 = 0;
-	int funk = 0;
-	int english = 0;//yes
-	爵士 == jazz;
-	英语 == english;
-	中日结合 == japaneseandenglish;
-	printf("请输入歌单的类型(有爵士_英语_funk_中日结合)\n");
-	printf("每次输出歌单后会退出程序需重新进入(代码不会写)\n");
-	printf("内容持续更新\n");
-		(void)scanf("%d", &英语);
-		fflush(stdin);
-		(void)scanf("%d", &爵士);
-		fflush(stdin);
-		(void)scanf("%d", &中日结合);
-		fflush(stdin);
-		(void)scanf("%d", &funk);
-		fflush(stdin);
-		switch (英语)
+	int input = 0;
+	do
+	{
+		int japanese = 0;
+		int japaneseandenglish = 0;
+		int jazz = 0;
+		int 英语 = 0;
+		int 爵士 = 0;
+		int 中日结合 = 0;
+		int funk = 0;
+		int english = 0;//yes
+		爵士 == jazz;
+		英语 == english;
+		中日结合 == japaneseandenglish;
+		printf("请输入歌单的类型(有1.爵士 2.英语 3.funk 4.中日结合)\n");
+		printf("输入数字以输出歌单链接 输入0退出\n");
+		printf("内容持续更新\n");
+		scanf("%d", &input);
+		switch (input)
 		{
-		case 0:
+		case 2:
 			printf("歌单为https://music.163.com/playlist?id=18215392879&uct2=U2FsdGVkX1+aVkWgbzKa/Y2hOWMK4l6rHuPvqrYEUwg=请使用网易云导入歌曲链接_歌单来自blivibe");
 			break;
-		}
-		switch (爵士)
-		{
 		case 1:
 			printf("歌单为https://music.163.com/playlist?id=18215392879&uct2=U2FsdGVkX1+aVkWgbzKa/Y2hOWMK4l6rHuPvqrYEUwg=请使用网易云导入歌曲链接_歌单来自blivibe");
 			break;
-		}
-		switch (funk)
-		{
-		case 2:
-			printf("歌单为https://music.163.com/playlist?id=18177155736&uct2=U2FsdGVkX19+S76nYy6nSNF0S1DmDKQOlc2EkDnhfoo=请使用网易云导入歌曲链接_歌单来自blivibe");
-				break;
-		}
-		switch (中日结合)
-		{
 		case 3:
+			printf("歌单为https://music.163.com/playlist?id=18177155736&uct2=U2FsdGVkX19+S76nYy6nSNF0S1DmDKQOlc2EkDnhfoo=请使用网易云导入歌曲链接_歌单来自blivibe");
+			break;
+		case 4:
 			printf("歌单为https://music.163.com/playlist?id=13477338636&uct2=U2FsdGVkX19rKONL5GgxDfMW9Nwp7SgpWEsgd51Lbnw=请使用网易云导入歌曲链接_歌单来自失眠雪雪豹");
 			break;
+		default:
+				printf("你知不知道你在输入什么?");
+				break;
 		}
-	return 0;
-}
+		} while (input);
+		return 0;
+	}
 
